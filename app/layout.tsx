@@ -3,8 +3,6 @@ export const metadata = {
   description: "Connecting Guangdong and South America through global trade.",
 };
 
-<link rel="icon" href="/favicon.ico" sizes="any" />
-
 export default function RootLayout({
   children,
 }: {
@@ -12,7 +10,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body>{children}</body>
     </html>
-  )
+  );
 }
