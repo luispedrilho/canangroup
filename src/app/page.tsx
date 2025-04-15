@@ -1,23 +1,50 @@
+"use client";
+import { useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; // ✅ Adicionado
+import Link from "next/link";
+import { Menu, X } from "lucide-react";
 import "@/styles/globals.css";
 
 export default function HomePage() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <div className="bg-white text-gray-800">
-      <header className="bg-[#F5F7FA] text-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
+            <header className="bg-[#F5F7FA] text-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link href="/">
             <Image src="/logo-canan.png" alt="CaNan Group Logo" width={240} height={80} />
           </Link>
-          <nav className="space-x-6 text-sm font-medium">
+
+          {/* Desktop Menu */}
+          <nav className="hidden md:flex space-x-6 text-sm font-medium">
             <a href="#about" className="hover:underline">About Us</a>
             <a href="#vision" className="hover:underline">Our Vision</a>
             <a href="#team" className="hover:underline">Our Team</a>
             <a href="#services" className="hover:underline">What We Do</a>
             <a href="#products" className="hover:underline">Our Products</a>
           </nav>
+
+          {/* Mobile Toggle */}
+          <button
+            className="md:hidden"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
+          >
+            {isOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Menu */}
+        {isOpen && (
+          <div className="md:hidden mt-4 space-y-2 px-6 text-sm font-medium">
+            <a href="#about" className="block hover:underline">About Us</a>
+            <a href="#vision" className="block hover:underline">Our Vision</a>
+            <a href="#team" className="block hover:underline">Our Team</a>
+            <a href="#services" className="block hover:underline">What We Do</a>
+            <a href="#products" className="block hover:underline">Our Products</a>
+          </div>
+        )}
       </header>
 
       <section
@@ -28,7 +55,7 @@ export default function HomePage() {
         <div className="relative z-10 text-center px-4">
           <h1 className="text-5xl font-bold mb-4">Bridging Southern Excellence</h1>
           <p className="text-xl max-w-2xl mx-auto">
-            Connecting Guangdong’s consumer power with South America’s agricultural abundance.
+            Connecting Guangdong's consumer power with South America's agricultural abundance.
           </p>
         </div>
       </section>
@@ -47,7 +74,7 @@ export default function HomePage() {
         <h2 className="text-3xl font-bold mb-4">About Us</h2>
         <p className="mb-6">
           At <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span> was conceived to establish a dynamic business network
-          that unites two powerhouse southern regions on a shared platform. By transcending geographical boundaries, we connect Guangdong, China’s
+          that unites two powerhouse southern regions on a shared platform. By transcending geographical boundaries, we connect Guangdong, China's
           southern economic giant, to the resource-rich southern hemisphere of America—creating a seamless supply chain that drives innovation,
           sustainability, and growth.
         </p>
@@ -56,22 +83,22 @@ export default function HomePage() {
         <p className="mb-4">
           Situated in southern China, Guangdong stands as one of the country's most influential provinces. Home to around 130 million active consumers,
           it boasts an economy larger than any other province in China, with a GDP of nearly USD 2 trillion—ranking among the top 10 economies globally.
-          Its strategic location along one of China’s longest coastlines, fronting the South China Sea, has established Guangdong as a global trade gateway.
+          Its strategic location along one of China's longest coastlines, fronting the South China Sea, has established Guangdong as a global trade gateway.
         </p>
         <p className="mb-6">
-          Guangdong’s major cities, such as Guangzhou and Shenzhen, are not only renowned for their manufacturing prowess but have also become global centers
-          of technology and innovation. As a vital driver of China’s economic growth, Guangdong represents the epitome of consumer power and industrial strength.
+          Guangdong's major cities, such as Guangzhou and Shenzhen, are not only renowned for their manufacturing prowess but have also become global centers
+          of technology and innovation. As a vital driver of China's economic growth, Guangdong represents the epitome of consumer power and industrial strength.
         </p>
 
         <h3 className="text-lg font-semibold mb-2">A Southern Source of Supply</h3>
         <p className="mb-4">
           In the southern hemisphere, South America emerges as a global leader in food production and exportation. With some of the world's most fertile lands,
-          including Brazil’s <span className="italic">Cerrado</span> and Argentina's Pampas, the continent is a powerhouse for crops like soybeans, corn,
+          including Brazil's <span className="italic">Cerrado</span> and Argentina's Pampas, the continent is a powerhouse for crops like soybeans, corn,
           coffee, sugarcane, and beef. Abundant freshwater resources and diverse climates allow for sustainable, year-round agricultural practices.
         </p>
         <p>
-          South America’s unique combination of natural assets, vast farmland, renewable energy potential, and efficient production costs gives it a significant
-          edge in the global food market. This agricultural dominance ensures the continent’s critical role in advancing global food security and sustainability.
+          South America's unique combination of natural assets, vast farmland, renewable energy potential, and efficient production costs gives it a significant
+          edge in the global food market. This agricultural dominance ensures the continent's critical role in advancing global food security and sustainability.
         </p>
       </section>
 
@@ -80,7 +107,7 @@ export default function HomePage() {
         <p className="mb-6">
           <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span> was founded with a clear purpose: to build a bridge between these two southern
           regions, creating a unified network that fosters mutual growth and prosperity. By forging strategic, long-term partnerships with South American
-          food suppliers, we ensure the delivery of premium-quality food to meet the growing demands of Guangdong’s vibrant market.
+          food suppliers, we ensure the delivery of premium-quality food to meet the growing demands of Guangdong's vibrant market.
         </p>
 
         <p>
@@ -101,14 +128,14 @@ export default function HomePage() {
         <p className="mb-6">
           <span className="font-semibold">In Guangdong, China</span>, our highly experienced sales team brings over 30 years of expertise to the table.
           With well-established partnerships spanning both public and private sectors, including food processors, distributors, and retailers, they
-          ensure seamless connections within one of the world’s most dynamic consumer markets. Their in-depth market knowledge and commitment to
+          ensure seamless connections within one of the world's most dynamic consumer markets. Their in-depth market knowledge and commitment to
           excellence form the foundation of our trusted relationships and success.
         </p>
 
         <p className="mb-6">
           <span className="font-semibold">In South America, Brazil</span>, our skilled food procurement team boasts more than 20 years of proven experience
           in the agribusiness sector. Their expertise ensures a transparent, sustainable, and efficient food sourcing channel that upholds the highest
-          standards of quality and integrity. By leveraging South America’s agricultural abundance, this team secures premium products that meet the
+          standards of quality and integrity. By leveraging South America's agricultural abundance, this team secures premium products that meet the
           demands of global markets.
         </p>
 
@@ -182,7 +209,7 @@ export default function HomePage() {
           <div>
             <Image src="/logo-canan.png" alt="CaNan Group Logo" width={180} height={60} />
             <p className="mt-4 text-sm text-gray-300">
-              Bridging Southern Excellence — connecting Guangdong’s consumer power with South America’s agricultural abundance.
+              Bridging Southern Excellence — connecting Guangdong's consumer power with South America's agricultural abundance.
             </p>
           </div>
 
