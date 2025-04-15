@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}" // ✅ Isso garante que tudo dentro de src é escaneado
   ],
   theme: {
     extend: {},
