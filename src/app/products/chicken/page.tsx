@@ -2,16 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function ChickenPage() {
-  const products = ["Sugar", "Corn", "Soybeans", "Beef", "Chicken", "Pork"];
+  const products = ["Sugar", "Corn", "Soybeans", "Beef", "Chicken"];
 
   return (
     <div className="bg-white text-gray-800">
 
       <header className="bg-[#F5F7FA] text-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <Link href="/">
-          <Image src="/logo-canan.png" alt="CaNan Group Logo" width={240} height={80} />
-        </Link>          <nav className="space-x-6 text-sm font-medium">
+          <Link href="/">
+            <Image src="/logo-canan.png" alt="CaNan Group Logo" width={240} height={80} />
+          </Link>          <nav className="space-x-6 text-sm font-medium">
             <a href="/#about" className="hover:underline">About Us</a>
             <a href="/#vision" className="hover:underline">Our Vision</a>
             <a href="/#team" className="hover:underline">Our Team</a>
@@ -23,20 +23,23 @@ export default function ChickenPage() {
 
       <section className="bg-white-100 py-16 text-center">
         <h1 className="text-5xl font-bold text-gray-900 mb-4">
-          Chicken: Affordable Protein for the World
+          Chicken: A Versatile Protein for Every Plate
         </h1>
       </section>
 
       <div className="max-w-6xl mx-auto px-1 py-2 flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 px-1 py-12">
           <p className="text-gray-700 mb-4">
-            Chicken meat is a widely consumed source of lean protein, valued for its affordability and efficiency of production.
+            Chicken is a cornerstone of global cuisine, celebrated for its versatility, flavor, and nutritional benefits. From hearty home-cooked meals to gourmet restaurant dishes, chicken fits seamlessly into a variety of culinary traditions, making it one of the most widely consumed proteins in the world.
           </p>
           <p className="text-gray-700 mb-4">
-            CaNan offers frozen chicken cuts sourced from top-tier certified producers in South America, processed under international hygiene standards.
+            Known for its high-quality protein, chicken supports muscle growth and overall health. It’s also a lean meat, offering essential nutrients like B vitamins and selenium, which contribute to energy production and immune function. Its adaptability makes it ideal for a range of recipes, from grilled and roasted dishes to soups, stews, and more.
           </p>
-          <p>
-            We enable full container and mixed product shipping to meet customer-specific demands.
+          <p className="text-gray-700 mb-4">
+            Chicken importation plays a vital role in meeting global demand, ensuring a steady supply of diverse cuts and processed products. Imported chicken is essential for foodservice, retail, and further processing, helping to stabilize markets and provide affordable options for consumers.
+          </p>
+          <p className="text-gray-700 mb-4">
+            At 加南 CaNan, we are dedicated to supplying top-quality chicken that meets the highest standards of freshness and sustainability. Whether for everyday meals or special occasions, we bring a product that nourishes, satisfies, and connects people across cultures.
           </p>
         </div>
         <div className="md:w-1/2">
@@ -52,7 +55,7 @@ export default function ChickenPage() {
 
       <div className="max-w-6xl mx-auto px-1 py-12 space-y-8 leading-relaxed text-lg">
         <div className="bg-gray-50 p-6 rounded-md shadow-sm text-sm">
-          <h2 className="font-bold mb-2">Chicken Exporters:</h2>
+          <h2 className="font-bold mb-2">Top 5 Exporters by volume:</h2>
           <ul className="list-disc list-inside space-y-1">
             <li><strong>Brazil</strong>: ~4.5 million metric tons.</li>
             <li><strong>United States</strong>: ~3 million metric tons.</li>
@@ -60,7 +63,7 @@ export default function ChickenPage() {
             <li><strong>Thailand</strong>: ~1 million metric tons.</li>
             <li><strong>China</strong>: ~700 thousand metric tons.</li>
           </ul>
-          <h2 className="font-bold mt-4 mb-2">Chicken Importers:</h2>
+          <h2 className="font-bold mt-4 mb-2">Top 5 Importers by volume:</h2>
           <ul className="list-disc list-inside space-y-1">
             <li><strong>China</strong>: ~1.2 million metric tons.</li>
             <li><strong>Saudi Arabia</strong>: ~1 million metric tons.</li>

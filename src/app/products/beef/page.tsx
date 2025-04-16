@@ -2,16 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function BeefPage() {
-  const products = ["Sugar", "Corn", "Soybeans", "Beef", "Chicken", "Pork"];
+  const products = ["Sugar", "Corn", "Soybeans", "Beef", "Chicken"];
 
   return (
     <div className="bg-white text-gray-800">
 
       <header className="bg-[#F5F7FA] text-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <Link href="/">
-          <Image src="/logo-canan.png" alt="CaNan Group Logo" width={240} height={80} />
-        </Link>          <nav className="space-x-6 text-sm font-medium">
+          <Link href="/">
+            <Image src="/logo-canan.png" alt="CaNan Group Logo" width={240} height={80} />
+          </Link>          <nav className="space-x-6 text-sm font-medium">
             <a href="/#about" className="hover:underline">About Us</a>
             <a href="/#vision" className="hover:underline">Our Vision</a>
             <a href="/#team" className="hover:underline">Our Team</a>
@@ -23,7 +23,7 @@ export default function BeefPage() {
 
       <section className="bg-white-100 py-16 text-center">
         <h1 className="text-5xl font-bold text-gray-900 mb-4">
-          Beef: Excellence in Quality and Global Distribution
+          Beef: Quality That Fuels Taste and Supports Global Trade
         </h1>
       </section>
 
@@ -32,13 +32,16 @@ export default function BeefPage() {
         {/* Texto à esquerda */}
         <div className="md:w-1/2 px-1 py-12">
           <p className="text-gray-700 mb-4">
-            Our beef is sourced from the most reputable producers in South America, where animal welfare and quality standards are a top priority.
+            Beef is more than just a staple protein—it's a symbol of quality, nutrition, and culinary artistry. Whether it’s a tender steak, lean ground beef, or premium cuts, beef serves as a cornerstone of countless cuisines worldwide. Its versatility and rich flavor make it an essential ingredient in both traditional and innovative dishes.
           </p>
           <p className="text-gray-700 mb-4">
-            It is a high-quality protein option with international certifications, exported fresh and frozen to meet the diverse needs of global markets.
+            Beef importation plays a crucial role in meeting domestic demand, especially for countries with limited production or specific consumer preferences. Imported beef is widely used in foodservice, retail, and processing industries, helping stabilize supply and ensuring the consistent availability of beef products. It complements the market by offering diverse and affordable options while allowing domestic producers to focus on high-quality cuts.
           </p>
-          <p>
-            We specialize in customizable cuts, full-traceability logistics, and sustainable production practices, offering top-grade beef for foodservice and retail clients worldwide.
+          <p className="text-gray-700 mb-4">
+            Beyond its culinary appeal, beef is a powerhouse of nutrition. Packed with high-quality protein, essential vitamins like B12, and minerals such as iron and zinc, it supports muscle development, boosts energy, and contributes to overall health. The trade relationships fostered by beef importation benefit both importing and exporting countries, ensuring food security and strengthening global partnerships.
+          </p>
+          <p className="text-gray-700 mb-4">
+            At 加南 CaNan, we are dedicated to delivering premium-grade beef to meet diverse needs. From local kitchens to international markets, our commitment is to provide quality that satisfies and sustains, bringing excellence to every plate.
           </p>
         </div>
 
@@ -56,22 +59,22 @@ export default function BeefPage() {
 
       <div className="max-w-6xl mx-auto px-1 py-12 space-y-8 leading-relaxed text-lg">
         <div className="bg-gray-50 p-6 rounded-md shadow-sm text-sm">
-          <h2 className="font-bold mb-2">Top Beef Exporters:</h2>
-          <ul className="list-disc list-inside space-y-1">
-            <li><strong>Brazil</strong>: ~2.9 million metric tons annually.</li>
-            <li><strong>United States</strong>: ~1.5 million metric tons.</li>
-            <li><strong>Australia</strong>: ~1.4 million metric tons.</li>
-            <li><strong>India</strong>: ~1.3 million metric tons.</li>
-            <li><strong>Argentina</strong>: ~800 thousand metric tons.</li>
+        <h2 className="font-bold mt-4 mb-2">Top Sugar Exporters by Volume:</h2>
+        <ul className="list-disc list-inside space-y-1">
+            <li><strong>Brazil</strong>: 23% of global exports.</li>
+            <li><strong>India</strong>: 19%.</li>
+            <li><strong>United States</strong>: 11.5%.</li>
+            <li><strong>Australia</strong>: 10.7%.</li>
+            <li><strong>Argentina</strong>: 9.2%.</li>
           </ul>
 
-          <h2 className="font-bold mt-4 mb-2">Main Beef Importers:</h2>
+          <h2 className="font-bold mt-4 mb-2">Top 5 Importers by volume:</h2>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>China</strong>: ~2.7 million metric tons (largest global importer).</li>
-            <li><strong>United States</strong>: ~1.2 million metric tons.</li>
-            <li><strong>Japan</strong>: ~800 thousand metric tons.</li>
-            <li><strong>South Korea</strong>: ~600 thousand metric tons.</li>
-            <li><strong>EU</strong>: ~500 thousand metric tons.</li>
+            <li><strong>China</strong>: 25% of global imports.</li>
+            <li><strong>United States</strong>: 18%.</li>
+            <li><strong>South Korea</strong>: 12%.</li>
+            <li><strong>Japan</strong>: 10%.</li>
+            <li><strong>Italy</strong>: 9%.</li>
           </ul>
         </div>
 

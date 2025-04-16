@@ -67,7 +67,6 @@ export default function HomePage() {
         <Link href="/products/soybeans" className="hover:underline">Soybeans</Link>
         <Link href="/products/beef" className="hover:underline">Beef</Link>
         <Link href="/products/chicken" className="hover:underline">Chicken</Link>
-        <Link href="/products/pork" className="hover:underline">Pork</Link>
       </div>
 
       <section id="about" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
@@ -185,7 +184,7 @@ export default function HomePage() {
       <section id="products" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">Our Products</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {['Sugar', 'Corn', 'Soybeans', 'Beef', 'Chicken', 'Pork'].map(product => (
+          {['Sugar', 'Corn', 'Soybeans', 'Beef', 'Chicken'].map(product => (
             <Link
               key={product}
               href={`/products/${product.toLowerCase()}`}
