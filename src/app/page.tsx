@@ -72,7 +72,7 @@ export default function HomePage() {
       <section id="about" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">About Us</h2>
         <p className="mb-6">
-          At <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span> was conceived to establish a dynamic business network
+          At 加南 CaNan Group was conceived to establish a dynamic business network
           that unites two powerhouse southern regions on a shared platform. By transcending geographical boundaries, we connect Guangdong, China's
           southern economic giant, to the resource-rich southern hemisphere of America—creating a seamless supply chain that drives innovation,
           sustainability, and growth.
@@ -104,14 +104,14 @@ export default function HomePage() {
       <section id="vision" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-gray-50">
         <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
         <p className="mb-6">
-          <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span> was founded with a clear purpose: to build a bridge between these two southern
+        加南 CaNan Group was founded with a clear purpose: to build a bridge between these two southern
           regions, creating a unified network that fosters mutual growth and prosperity. By forging strategic, long-term partnerships with South American
           food suppliers, we ensure the delivery of premium-quality food to meet the growing demands of Guangdong's vibrant market.
         </p>
 
         <p>
           Our commitment lies in <span className="font-medium">innovation, efficiency, transparency and sustainability</span>, as we strive to set new
-          standards in global trade and food supply. At <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span>,
+          standards in global trade and food supply. At 加南 CaNan Group,
           we believe in <span className="italic">connecting continents</span>, <span className="italic">empowering communities</span>, and creating a
           future where the south leads the world in excellence.
         </p>
@@ -120,7 +120,7 @@ export default function HomePage() {
       <section id="team" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">Our Team</h2>
         <p className="mb-6">
-          At <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span>, our success is driven by the expertise and dedication of our
+        At 加南 CaNan Group, our success is driven by the expertise and dedication of our
           exceptional team, strategically positioned across two continents to deliver unmatched value in global food trade.
         </p>
 
@@ -140,7 +140,7 @@ export default function HomePage() {
 
         <p>
           <span className="font-semibold">Together</span>, our teams embody the values of professionalism, collaboration, and innovation, creating a robust
-          supply chain network that unites southern regions and transcends boundaries. At <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span>,
+          supply chain network that unites southern regions and transcends boundaries. At 加南 CaNan Group,
           our people are our greatest asset, delivering first-class solutions with passion and expertise.
         </p>
       </section>
@@ -148,7 +148,7 @@ export default function HomePage() {
       <section id="services" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-gray-50">
         <h2 className="text-3xl font-bold mb-4">What We Do</h2>
         <p className="mb-6">
-          At <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span>, we specialize in the trade and distribution of
+        At 加南 CaNan Group, we specialize in the trade and distribution of
           high-quality agricultural products, ensuring that global markets are consistently supplied with essential commodities.
           Our portfolio includes <span className="font-medium">sugar, corn, soybeans</span>, and premium frozen animal proteins such as
           <span className="font-medium"> beef, chicken, and pork</span>.
@@ -170,13 +170,13 @@ export default function HomePage() {
             <strong>Custom Food Sourcing Solutions</strong>: Crafting personalized strategies to meet specific demands, ensuring quality and reliability at every step.
           </li>
           <li>
-            <strong>Distribution Services</strong>: Choose <span className="font-bold">加南 <span className="text-indigo-600">CaNan Group</span></span> as your trusted distributor,
+            <strong>Distribution Services</strong>: Choose 加南 CaNan Group as your trusted distributor,
             connecting your premium food products with markets in China and beyond. We are dedicated to delivering quality, reliability, and professionalism to help your business thrive.
           </li>
         </ul>
 
         <p>
-          • At <span className="font-bold">CaNan Group</span>, we are committed to creating value by connecting producers to consumers,
+          • At 加南 CaNan Group, we are committed to creating value by connecting producers to consumers,
           fostering strong partnerships, and delivering excellence in the global agricultural supply chain.
         </p>
       </section>
@@ -226,8 +226,8 @@ export default function HomePage() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
             <p className="text-sm text-gray-300">📍 Operating between Guangdong, China & South America</p>
-            <p className="text-sm text-gray-300 mt-2">✉️ <a href="mailto:contact@canangroup.com" className="underline">contact@canangroup.com</a></p>
-            <p className="text-sm text-gray-300 mt-2">🌐 www.canangroup.com</p>
+            <p className="text-sm text-gray-300 mt-2">✉️ <a href="mailto:contact@canangroup.com.hk" className="underline">contact@canangroup.com.hk</a></p>
+            <p className="text-sm text-gray-300 mt-2">🌐 www.canangroup.com.hk</p>
           </div>
         </div>
 

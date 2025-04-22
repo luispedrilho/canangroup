@@ -99,6 +99,39 @@ export default function SoybeansPage() {
           </div>
         </div>
       </section>
+
+      <footer className="bg-[#1C2E46] text-white py-10 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <Image src="/logo-canan.png" alt="CaNan Group Logo" width={180} height={60} />
+            <p className="mt-4 text-sm text-gray-300">
+              Bridging Southern Excellence — connecting Guangdong's consumer power with South America's agricultural abundance.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              <li><a href="#about" className="hover:underline">About Us</a></li>
+              <li><a href="#vision" className="hover:underline">Our Vision</a></li>
+              <li><a href="#team" className="hover:underline">Our Team</a></li>
+              <li><a href="#services" className="hover:underline">What We Do</a></li>
+              <li><a href="#products" className="hover:underline">Our Products</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold mb-4">Contact</h4>
+            <p className="text-sm text-gray-300">📍 Operating between Guangdong, China & South America</p>
+            <p className="text-sm text-gray-300 mt-2">✉️ <a href="mailto:contact@canangroup.com.hk" className="underline">contact@canangroup.com.hk</a></p>
+            <p className="text-sm text-gray-300 mt-2">🌐 www.canangroup.com.hk</p>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-xs text-gray-400">
+          &copy; {new Date().getFullYear()} CaNan Group. All rights reserved.
+        </div>
+      </footer>
     </div>
   );
 }
