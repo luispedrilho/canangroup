@@ -1,31 +1,76 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import "@/styles/globals.css";
 
+
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const bannerMessages = [
+    "Bridging Southern Excellence",
+    "Empowering Corn Trade",
+    "Global Reach in Soybean Exports"
+  ];
+
+  const bannerDescriptions = [
+    "Connecting Guangdong's consumer power with South America's agricultural abundance.",
+    "From fertile fields to the global stage — Corn that feeds the world.",
+    "Soybeans cultivated for sustainability and global nourishment."
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animatingKey, setAnimatingKey] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % bannerMessages.length);
+      setAnimatingKey((prev) => prev + 1); // força re-render animado
+    }, 4000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % bannerMessages.length);
+    }, 4000); // troca a cada 4 segundos
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="bg-white text-gray-800">
-            <header className="bg-[#F5F7FA] text-gray-900 px-6 py-4 shadow-md sticky top-0 z-50">
+      {/* Cabeçalho */}
+      <header className="bg-[#f6f7f9] text-gray-900 px-6 py-0 shadow-md sticky top-0 z-50">
+
         <div className="max-w-6xl mx-auto flex justify-between items-center">
+          {/* Logo */}
           <Link href="/">
             <Image src="/logo-canan.png" alt="CaNan Group Logo" width={240} height={80} />
           </Link>
 
-          {/* Desktop Menu */}
-          <nav className="hidden md:flex space-x-6 text-sm font-medium">
-            <a href="#about" className="hover:underline">About Us</a>
-            <a href="#vision" className="hover:underline">Our Vision</a>
-            <a href="#team" className="hover:underline">Our Team</a>
-            <a href="#services" className="hover:underline">What We Do</a>
-            <a href="#products" className="hover:underline">Our Products</a>
+          {/* Menu Desktop */}
+          <nav className="hidden md:flex space-x-4 text-sm font-semibold text-[#1C2E46] tracking-wide drop-shadow-lg">
+            {[
+              { label: "About Us", href: "#about" },
+              { label: "Our Vision", href: "#vision" },
+              { label: "Our Team", href: "#team" },
+              { label: "What We Do", href: "#services" },
+              { label: "Our Products", href: "#products" },
+            ].map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className="flex items-center gap-2 px-3 py-1 rounded-lg hover:bg-[#EAF0F6] transition-all"
+              >
+                <span>{item.label}</span>
+              </a>
+            ))}
           </nav>
 
-          {/* Mobile Toggle */}
+          {/* Botão de Toggle para Menu Mobile */}
           <button
             className="md:hidden"
             onClick={() => setIsOpen(!isOpen)}
@@ -35,7 +80,7 @@ export default function HomePage() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Menu Mobile */}
         {isOpen && (
           <div className="md:hidden mt-4 space-y-2 px-6 text-sm font-medium">
             <a href="#about" className="block hover:underline">About Us</a>
@@ -47,28 +92,55 @@ export default function HomePage() {
         )}
       </header>
 
+      {/* Seção de Banner */}
       <section
-        className="relative h-[80vh] flex items-center justify-center text-white bg-cover bg-center"
+        className="relative h-[75vh] flex items-center justify-end text-white bg-cover bg-center px-12"
         style={{ backgroundImage: 'url(/banner-impact.jpg)' }}
       >
-        <div className="bg-black/50 absolute inset-0" />
-        <div className="relative z-10 text-center px-4">
-          <h1 className="text-5xl font-bold mb-4">Bridging Southern Excellence</h1>
-          <p className="text-xl max-w-2xl mx-auto">
-            Connecting Guangdong's consumer power with South America's agricultural abundance.
-          </p>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
+        <div className="relative z-10 text-right px-4 mt-60 transition-all duration-700 w-full max-w-4xl ml-auto">
+          <div
+            key={animatingKey}
+            className="animate-slideDown transition-all duration-700"
+          >
+            <h1 className="text-5xl font-bold px-6 py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white min-w-[500px] text-right">
+              {bannerMessages[currentIndex]}
+            </h1>
+            <p className="text-xl max-w-2xl ml-auto mt-2 text-white text-right">
+              {bannerDescriptions[currentIndex]}
+            </p>
+          </div>
+          <Link
+            href="#about"
+            className="mt-6 inline-block bg-[#ffffff] text-[#162336] font-medium px-6 py-2 rounded-full hover:bg-[#162336] hover:text-white transition drop-shadow-lg"
+          >
+            Learn More
+          </Link>
         </div>
       </section>
 
       {/* Marquee com links para as subpáginas */}
-      <div className="overflow-hidden bg-[#1C2E46] text-white py-2 flex justify-right px-6 space-x-6 text-sm font-semibold">
-        <Link href="/products/sugar" className="hover:underline">Sugar</Link>
-        <Link href="/products/corn" className="hover:underline">Corn</Link>
-        <Link href="/products/soybeans" className="hover:underline">Soybeans</Link>
-        <Link href="/products/beef" className="hover:underline">Beef</Link>
-        <Link href="/products/chicken" className="hover:underline">Chicken</Link>
+      <div className="sticky top-[130px] z-40 bg-[#F9FAFC] shadow-lg">
+        <div className="overflow-x-auto py-3 px-6 flex space-x-4 text-sm font-semibold text-black">
+          {['Sugar', 'Corn', 'Soybeans', 'Beef', 'Chicken'].map(product => (
+            <Link
+              key={product}
+              href={`/products/${product.toLowerCase()}`}
+              className="flex items-center gap-2 px-3 py-1 rounded-lg hover:bg-[#EAF0F6] transition-all whitespace-nowrap"
+            >
+              <Image
+                src={`/icons/${product.toLowerCase()}.svg`}
+                width={20}
+                height={20}
+                alt={product}
+              />
+              {product}
+            </Link>
+          ))}
+        </div>
       </div>
 
+      {/* Seção Sobre Nós */}
       <section id="about" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">About Us</h2>
         <p className="mb-6">
@@ -101,10 +173,11 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section id="vision" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-gray-50">
+      {/* Seção Nossa Visão */}
+      <section id="vision" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-[#F9FAFC]">
         <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
         <p className="mb-6">
-        加南 CaNan Group was founded with a clear purpose: to build a bridge between these two southern
+          加南 CaNan Group was founded with a clear purpose: to build a bridge between these two southern
           regions, creating a unified network that fosters mutual growth and prosperity. By forging strategic, long-term partnerships with South American
           food suppliers, we ensure the delivery of premium-quality food to meet the growing demands of Guangdong's vibrant market.
         </p>
@@ -117,10 +190,11 @@ export default function HomePage() {
         </p>
       </section>
 
+      {/* Seção Nossa Equipe */}
       <section id="team" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
         <h2 className="text-3xl font-bold mb-4">Our Team</h2>
         <p className="mb-6">
-        At 加南 CaNan Group, our success is driven by the expertise and dedication of our
+          At 加南 CaNan Group, our success is driven by the expertise and dedication of our
           exceptional team, strategically positioned across two continents to deliver unmatched value in global food trade.
         </p>
 
@@ -145,10 +219,11 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section id="services" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-gray-50">
+      {/* Seção O Que Fazemos */}
+      <section id="services" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-[#f6f7f9]">
         <h2 className="text-3xl font-bold mb-4">What We Do</h2>
         <p className="mb-6">
-        At 加南 CaNan Group, we specialize in the trade and distribution of
+          At 加南 CaNan Group, we specialize in the trade and distribution of
           high-quality agricultural products, ensuring that global markets are consistently supplied with essential commodities.
           Our portfolio includes <span className="font-medium">sugar, corn, soybeans</span>, and premium frozen animal proteins such as
           <span className="font-medium"> beef, chicken, and pork</span>.
@@ -181,61 +256,90 @@ export default function HomePage() {
         </p>
       </section>
 
-      <section id="products" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">Our Products</h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-          {['Sugar', 'Corn', 'Soybeans', 'Beef', 'Chicken'].map(product => (
-            <Link
-              key={product}
-              href={`/products/${product.toLowerCase()}`}
-              className="p-4 bg-white border shadow rounded-xl text-center hover:shadow-lg transition"
-            >
-              <Image
-                src={`/products/${product.toLowerCase()}.jpg`}
-                alt={product}
-                width={100}
-                height={100}
-                className="mx-auto mb-2 rounded-full"
-              />
-              <h3 className="text-xl font-semibold">{product}</h3>
-            </Link>
-          ))}
+      {/* Seção Nossos Produtos */}
+      <section
+        id="products"
+        className="relative w-full bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: 'url("/back-products.png")' }}
+      >
+        {/* Separador visual suave entre seções */}
+        <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-t from-[#1C2E46] to-transparent z-10" />
+
+        {/* Overlay com cor institucional */}
+        <div className="absolute inset-0 bg-[#1C2E46]/85 backdrop-blur-sm z-0" />
+
+        {/* Conteúdo */}
+        <div className="relative z-20 py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold mb-10 text-center text-white">Our Products</h2>
+            <div className="grid grid-cols-6 gap-6">
+              <Link href="/products/sugar" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
+                <img src="/icons/sugar.svg" alt="Sugar" className="w-10 h-10 md:w-12 md:h-12" />
+                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Sugar</h3>
+              </Link>
+              <Link href="/products/corn" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
+                <img src="/icons/corn.svg" alt="Corn" className="w-10 h-10 md:w-12 md:h-12" />
+                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Corn</h3>
+              </Link>
+              <Link href="/products/soybeans" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
+                <img src="/icons/soybeans.svg" alt="Soybeans" className="w-10 h-10 md:w-12 md:h-12" />
+                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Soybeans</h3>
+              </Link>
+              <Link href="/products/beef" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
+                <img src="/icons/beef.svg" alt="Beef" className="w-10 h-10 md:w-12 md:h-12" />
+                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Beef</h3>
+              </Link>
+              <Link href="/products/chicken" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
+                <img src="/icons/chicken.svg" alt="Chicken" className="w-10 h-10 md:w-12 md:h-12" />
+                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Chicken</h3>
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 
-      <footer className="bg-[#1C2E46] text-white py-10 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <Image src="/logo-canan.png" alt="CaNan Group Logo" width={180} height={60} />
-            <p className="mt-4 text-sm text-gray-300">
+
+
+      {/* Rodapé */}
+      <footer className="bg-gradient-to-br from-[#0A1A2F] via-[#0F253E] to-[#142F4D] text-white pt-16 pb-10 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+          {/* Logo + Slogan */}
+          <div className="flex flex-col gap-4">
+            <Image src="/logo-canan-white.png" alt="CaNan Group Logo" width={200} height={60} />
+            <p className="text-sm text-gray-300 leading-relaxed">
               Bridging Southern Excellence — connecting Guangdong's consumer power with South America's agricultural abundance.
             </p>
           </div>
 
+          {/* Quick Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2 text-sm">
-              <li><a href="#about" className="hover:underline">About Us</a></li>
-              <li><a href="#vision" className="hover:underline">Our Vision</a></li>
-              <li><a href="#team" className="hover:underline">Our Team</a></li>
-              <li><a href="#services" className="hover:underline">What We Do</a></li>
-              <li><a href="#products" className="hover:underline">Our Products</a></li>
+            <ul className="space-y-2 text-sm text-gray-300">
+              {["About Us", "Our Vision", "Our Team", "What We Do", "Our Products"].map((label) => (
+                <li key={label}>
+                  <a href={`#${label.toLowerCase().replace(/ /g, "")}`} className="hover:text-white transition">
+                    {label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
+          {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>
-            <p className="text-sm text-gray-300">📍 Operating between Guangdong, China & South America</p>
-            <p className="text-sm text-gray-300 mt-2">✉️ <a href="mailto:contact@canangroup.com.hk" className="underline">contact@canangroup.com.hk</a></p>
-            <p className="text-sm text-gray-300 mt-2">🌐 www.canangroup.com.hk</p>
+            <ul className="space-y-2 text-sm text-gray-300">
+              <li>📍 Guangdong, China & South America</li>
+              <li>✉️ <a href="mailto:contact@canangroup.com.hk" className="underline text-white">contact@canangroup.com.hk</a></li>
+              <li>🌐 <a href="https://www.canangroup.com.hk" target="_blank" className="underline text-white">www.canangroup.com.hk</a></li>
+            </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-xs text-gray-400">
+        <div className="mt-10 pt-6 border-t border-gray-600 text-center text-xs text-gray-400">
           &copy; {new Date().getFullYear()} CaNan Group. All rights reserved.
         </div>
       </footer>
-
     </div>
   );
 }
