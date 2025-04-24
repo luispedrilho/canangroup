@@ -97,12 +97,12 @@ export default function HomePage() {
         className="relative h-[75vh] flex items-center justify-end text-white bg-cover bg-center px-12"
         style={{ backgroundImage: 'url(/banner-impact.jpg)' }}
       >
+        {/* Gradiente sobre a imagem */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
+        
+        {/* Texto do banner */}
         <div className="relative z-10 text-right px-4 mt-60 transition-all duration-700 w-full max-w-4xl ml-auto">
-          <div
-            key={animatingKey}
-            className="animate-slideDown transition-all duration-700"
-          >
+          <div key={animatingKey} className="animate-slideDown transition-all duration-700">
             <h1 className="text-5xl font-bold px-6 py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white min-w-[500px] text-right">
               {bannerMessages[currentIndex]}
             </h1>
@@ -118,6 +118,7 @@ export default function HomePage() {
           </Link>
         </div>
       </section>
+
 
       {/* Marquee com links para as subpáginas */}
       <div className="sticky top-[130px] z-40 bg-[#F9FAFC] shadow-lg">
