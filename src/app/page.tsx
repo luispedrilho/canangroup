@@ -142,119 +142,127 @@ export default function HomePage() {
       </div>
 
       {/* Seção Sobre Nós */}
-      <section id="about" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">About Us</h2>
-        <p className="mb-6">
-          At 加南 CaNan Group was conceived to establish a dynamic business network
-          that unites two powerhouse southern regions on a shared platform. By transcending geographical boundaries, we connect Guangdong, China's
-          southern economic giant, to the resource-rich southern hemisphere of America—creating a seamless supply chain that drives innovation,
-          sustainability, and growth.
-        </p>
+      <section id="about" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-left bg-contain" style={{ backgroundImage: "url('/back-section-left.png')"}}>
+        <div className="relative max-w-6xl mx-auto">
 
-        <h3 className="text-lg font-semibold mb-2">A Southern Hub of Consumption</h3>
-        <p className="mb-4">
-          Situated in southern China, Guangdong stands as one of the country's most influential provinces. Home to around 130 million active consumers,
-          it boasts an economy larger than any other province in China, with a GDP of nearly USD 2 trillion—ranking among the top 10 economies globally.
-          Its strategic location along one of China's longest coastlines, fronting the South China Sea, has established Guangdong as a global trade gateway.
-        </p>
-        <p className="mb-6">
-          Guangdong's major cities, such as Guangzhou and Shenzhen, are not only renowned for their manufacturing prowess but have also become global centers
-          of technology and innovation. As a vital driver of China's economic growth, Guangdong represents the epitome of consumer power and industrial strength.
-        </p>
+          <h2 className="text-3xl font-bold mb-4">About Us</h2>
+          <p className="mb-6">
+            At 加南 CaNan Group was conceived to establish a dynamic business network
+            that unites two powerhouse southern regions on a shared platform. By transcending geographical boundaries, we connect Guangdong, China's
+            southern economic giant, to the resource-rich southern hemisphere of America—creating a seamless supply chain that drives innovation,
+            sustainability, and growth.
+          </p>
 
-        <h3 className="text-lg font-semibold mb-2">A Southern Source of Supply</h3>
-        <p className="mb-4">
-          In the southern hemisphere, South America emerges as a global leader in food production and exportation. With some of the world's most fertile lands,
-          including Brazil's <span className="italic">Cerrado</span> and Argentina's Pampas, the continent is a powerhouse for crops like soybeans, corn,
-          coffee, sugarcane, and beef. Abundant freshwater resources and diverse climates allow for sustainable, year-round agricultural practices.
-        </p>
-        <p>
-          South America's unique combination of natural assets, vast farmland, renewable energy potential, and efficient production costs gives it a significant
-          edge in the global food market. This agricultural dominance ensures the continent's critical role in advancing global food security and sustainability.
-        </p>
+          <h3 className="text-lg font-semibold mb-2">A Southern Hub of Consumption</h3>
+          <p className="mb-4">
+            Situated in southern China, Guangdong stands as one of the country's most influential provinces. Home to around 130 million active consumers,
+            it boasts an economy larger than any other province in China, with a GDP of nearly USD 2 trillion—ranking among the top 10 economies globally.
+            Its strategic location along one of China's longest coastlines, fronting the South China Sea, has established Guangdong as a global trade gateway.
+          </p>
+          <p className="mb-6">
+            Guangdong's major cities, such as Guangzhou and Shenzhen, are not only renowned for their manufacturing prowess but have also become global centers
+            of technology and innovation. As a vital driver of China's economic growth, Guangdong represents the epitome of consumer power and industrial strength.
+          </p>
+
+          <h3 className="text-lg font-semibold mb-2">A Southern Source of Supply</h3>
+          <p className="mb-4">
+            In the southern hemisphere, South America emerges as a global leader in food production and exportation. With some of the world's most fertile lands,
+            including Brazil's <span className="italic">Cerrado</span> and Argentina's Pampas, the continent is a powerhouse for crops like soybeans, corn,
+            coffee, sugarcane, and beef. Abundant freshwater resources and diverse climates allow for sustainable, year-round agricultural practices.
+          </p>
+          <p>
+            South America's unique combination of natural assets, vast farmland, renewable energy potential, and efficient production costs gives it a significant
+            edge in the global food market. This agricultural dominance ensures the continent's critical role in advancing global food security and sustainability.
+          </p>
+        </div>
       </section>
 
       {/* Seção Nossa Visão */}
-      <section id="vision" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-[#F9FAFC]">
-        <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
-        <p className="mb-6">
-          加南 CaNan Group was founded with a clear purpose: to build a bridge between these two southern
-          regions, creating a unified network that fosters mutual growth and prosperity. By forging strategic, long-term partnerships with South American
-          food suppliers, we ensure the delivery of premium-quality food to meet the growing demands of Guangdong's vibrant market.
-        </p>
+      <section id="vision" className="scroll-mt-28 py-16 px-6  mx-auto">
+        <div className="relative max-w-6xl mx-auto">
 
-        <p>
-          Our commitment lies in <span className="font-medium">innovation, efficiency, transparency and sustainability</span>, as we strive to set new
-          standards in global trade and food supply. At 加南 CaNan Group,
-          we believe in <span className="italic">connecting continents</span>, <span className="italic">empowering communities</span>, and creating a
-          future where the south leads the world in excellence.
-        </p>
+          <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
+          <p className="mb-6">
+            加南 CaNan Group was founded with a clear purpose: to build a bridge between these two southern
+            regions, creating a unified network that fosters mutual growth and prosperity. By forging strategic, long-term partnerships with South American
+            food suppliers, we ensure the delivery of premium-quality food to meet the growing demands of Guangdong's vibrant market.
+          </p>
+
+          <p>
+            Our commitment lies in <span className="font-medium">innovation, efficiency, transparency and sustainability</span>, as we strive to set new
+            standards in global trade and food supply. At 加南 CaNan Group,
+            we believe in <span className="italic">connecting continents</span>, <span className="italic">empowering communities</span>, and creating a
+            future where the south leads the world in excellence.
+          </p>
+        </div>
       </section>
 
       {/* Seção Nossa Equipe */}
-      <section id="team" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold mb-4">Our Team</h2>
-        <p className="mb-6">
-          At 加南 CaNan Group, our success is driven by the expertise and dedication of our
-          exceptional team, strategically positioned across two continents to deliver unmatched value in global food trade.
-        </p>
+      <section id="team" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-right bg-contain" style={{ backgroundImage: "url('/back-section-right.png')"}}>
+        <div className="relative max-w-6xl mx-auto">
 
-        <p className="mb-6">
-          <span className="font-semibold">In Guangdong, China</span>, our highly experienced sales team brings over 30 years of expertise to the table.
-          With well-established partnerships spanning both public and private sectors, including food processors, distributors, and retailers, they
-          ensure seamless connections within one of the world's most dynamic consumer markets. Their in-depth market knowledge and commitment to
-          excellence form the foundation of our trusted relationships and success.
-        </p>
+          <h2 className="text-3xl font-bold mb-4">Our Team</h2>
+          <p className="mb-6">
+            At 加南 CaNan Group, our success is driven by the expertise and dedication of our
+            exceptional team, strategically positioned across two continents to deliver unmatched value in global food trade.
+          </p>
 
-        <p className="mb-6">
-          <span className="font-semibold">In South America, Brazil</span>, our skilled food procurement team boasts more than 20 years of proven experience
-          in the agribusiness sector. Their expertise ensures a transparent, sustainable, and efficient food sourcing channel that upholds the highest
-          standards of quality and integrity. By leveraging South America's agricultural abundance, this team secures premium products that meet the
-          demands of global markets.
-        </p>
+          <p className="mb-6">
+            <span className="font-semibold">In Guangdong, China</span>, our highly experienced sales team brings over 30 years of expertise to the table.
+            With well-established partnerships spanning both public and private sectors, including food processors, distributors, and retailers, they
+            ensure seamless connections within one of the world's most dynamic consumer markets. Their in-depth market knowledge and commitment to
+            excellence form the foundation of our trusted relationships and success.
+          </p>
 
-        <p>
-          <span className="font-semibold">Together</span>, our teams embody the values of professionalism, collaboration, and innovation, creating a robust
-          supply chain network that unites southern regions and transcends boundaries. At 加南 CaNan Group,
-          our people are our greatest asset, delivering first-class solutions with passion and expertise.
-        </p>
+          <p className="mb-6">
+            <span className="font-semibold">In South America, Brazil</span>, our skilled food procurement team boasts more than 20 years of proven experience
+            in the agribusiness sector. Their expertise ensures a transparent, sustainable, and efficient food sourcing channel that upholds the highest
+            standards of quality and integrity. By leveraging South America's agricultural abundance, this team secures premium products that meet the
+            demands of global markets.
+          </p>
+
+          <p>
+            <span className="font-semibold">Together</span>, our teams embody the values of professionalism, collaboration, and innovation, creating a robust
+            supply chain network that unites southern regions and transcends boundaries. At 加南 CaNan Group,
+            our people are our greatest asset, delivering first-class solutions with passion and expertise.
+          </p>
+        </div>
       </section>
 
       {/* Seção O Que Fazemos */}
-      <section id="services" className="scroll-mt-28 py-16 px-6 max-w-5xl mx-auto bg-[#f6f7f9]">
-        <h2 className="text-3xl font-bold mb-4">What We Do</h2>
-        <p className="mb-6">
-          At 加南 CaNan Group, we specialize in the trade and distribution of
-          high-quality agricultural products, ensuring that global markets are consistently supplied with essential commodities.
-          Our portfolio includes <span className="font-medium">sugar, corn, soybeans</span>, and premium frozen animal proteins such as
-          <span className="font-medium"> beef, chicken, and pork</span>.
-        </p>
+      <section id="services" className="scroll-mt-28 py-16 px-6">
+        <div className="relative max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold mb-4">What We Do</h2>
+          <p className="mb-6">
+            At 加南 CaNan Group, we specialize in the trade and distribution of high-quality agricultural products, ensuring that global markets are consistently supplied with essential commodities.
+          </p>
 
-        <p className="mb-6">
-          We provide a comprehensive suite of services that go beyond simply trading products. Our expertise lies in delivering tailored solutions
-          to meet the unique needs of our partners:
-        </p>
+          <p className="mb-6">
+            We provide a comprehensive suite of services that go beyond simply trading products. Our expertise lies in delivering tailored solutions
+            to meet the unique needs of our partners:
+          </p>
 
-        <ul className="list-disc pl-6 space-y-4 mb-6">
-          <li>
-            <strong>Procurement Services</strong>: Leveraging our extensive network and experience to source the finest agricultural goods efficiently and sustainably.
-          </li>
-          <li>
-            <strong>Financing Solutions</strong>: Offering flexible financial options to support smooth and transparent transactions across borders.
-          </li>
-          <li>
-            <strong>Custom Food Sourcing Solutions</strong>: Crafting personalized strategies to meet specific demands, ensuring quality and reliability at every step.
-          </li>
-          <li>
-            <strong>Distribution Services</strong>: Choose 加南 CaNan Group as your trusted distributor,
-            connecting your premium food products with markets in China and beyond. We are dedicated to delivering quality, reliability, and professionalism to help your business thrive.
-          </li>
-        </ul>
+          <ul className="list-disc pl-6 space-y-4 mb-6">
+            <li>
+              <strong>Procurement Services</strong>: Leveraging our extensive network and experience to source the finest agricultural goods efficiently and sustainably.
+            </li>
+            <li>
+              <strong>Financing Solutions</strong>: Offering flexible financial options to support smooth and transparent transactions across borders.
+            </li>
+            <li>
+              <strong>Custom Food Sourcing Solutions</strong>: Crafting personalized strategies to meet specific demands, ensuring quality and reliability at every step.
+            </li>
+            <li>
+              <strong>Distribution Services</strong>: Choose 加南 CaNan Group as your trusted distributor,
+              connecting your premium food products with markets in China and beyond. We are dedicated to delivering quality, reliability, and professionalism to help your business thrive.
+            </li>
+          </ul>
 
-        <p>
-          • At 加南 CaNan Group, we are committed to creating value by connecting producers to consumers,
-          fostering strong partnerships, and delivering excellence in the global agricultural supply chain.
-        </p>
+          <p>
+            • At 加南 CaNan Group, we are committed to creating value by connecting producers to consumers,
+            fostering strong partnerships, and delivering excellence in the global agricultural supply chain.
+          </p>
+        </div>
       </section>
 
       {/* Seção Nossos Produtos */}
@@ -271,31 +279,31 @@ export default function HomePage() {
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
                   <img src="/products/sugar.jpg" alt="Sugar" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Sugar</h3>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Sugar</h3>
               </Link>
               <Link href="/products/corn" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
                   <img src="/products/corn.jpg" alt="Corn" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Corn</h3>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Corn</h3>
               </Link>
               <Link href="/products/soybeans" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
                   <img src="/products/soybeans.jpg" alt="Soybeans" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Soybeans</h3>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Soybeans</h3>
               </Link>
               <Link href="/products/beef" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
                   <img src="/products/beef.jpg" alt="Beef" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Beef</h3>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Beef</h3>
               </Link>
               <Link href="/products/chicken" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
                   <img src="/products/chicken.jpg" alt="Chicken" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Chicken</h3>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Chicken</h3>
               </Link>
             </div>
           </div>
