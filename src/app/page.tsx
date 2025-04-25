@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
@@ -8,19 +8,18 @@ import "@/styles/globals.css";
 
 export default function HomePage() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const bannerRef = useRef(null);
+  const [isVisible, setIsVisible] = useState(false);
   const bannerMessages = [
     "Bridging Southern Excellence",
     "Empowering Corn Trade",
     "Global Reach in Soybean Exports"
   ];
-
   const bannerDescriptions = [
     "Connecting Guangdong's consumer power with South America's agricultural abundance.",
     "From fertile fields to the global stage — Corn that feeds the world.",
     "Soybeans cultivated for sustainability and global nourishment."
   ];
-
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animatingKey, setAnimatingKey] = useState(0);
 
@@ -33,11 +32,22 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % bannerMessages.length);
-    }, 4000); // troca a cada 4 segundos
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsVisible(entry.isIntersecting);
+      },
+      { threshold: 0.3 } // 30% visível para disparar
+    );
 
-    return () => clearInterval(interval);
+    if (bannerRef.current) {
+      observer.observe(bannerRef.current);
+    }
+
+    return () => {
+      if (bannerRef.current) {
+        observer.unobserve(bannerRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -94,7 +104,10 @@ export default function HomePage() {
 
       {/* Seção de Banner */}
       <section
-        className="relative h-[75vh] flex items-center justify-end text-white bg-cover bg-center px-12"
+        id="banner"
+        ref={bannerRef}
+        className={`relative h-[75vh] flex items-center justify-end text-white bg-cover bg-center px-12 transition-all duration-1000 ${isVisible ? "scale-100 opacity-100" : "scale-110 opacity-0"
+          }`}
         style={{ backgroundImage: 'url(/banner-impact.jpg)' }}
       >
         {/* Gradiente sobre a imagem */}
@@ -142,7 +155,7 @@ export default function HomePage() {
       </div>
 
       {/* Seção Sobre Nós */}
-      <section id="about" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-left bg-contain" style={{ backgroundImage: "url('/back-section-left.png')"}}>
+      <section id="about" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-left bg-contain" style={{ backgroundImage: "url('/back-section-left.png')" }}>
         <div className="relative max-w-6xl mx-auto">
 
           <h2 className="text-3xl font-bold mb-4">About Us</h2>
@@ -198,7 +211,7 @@ export default function HomePage() {
       </section>
 
       {/* Seção Nossa Equipe */}
-      <section id="team" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-right bg-contain" style={{ backgroundImage: "url('/back-section-right.png')"}}>
+      <section id="team" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-right bg-contain" style={{ backgroundImage: "url('/back-section-right.png')" }}>
         <div className="relative max-w-6xl mx-auto">
 
           <h2 className="text-3xl font-bold mb-4">Our Team</h2>
