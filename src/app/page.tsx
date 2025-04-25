@@ -99,7 +99,7 @@ export default function HomePage() {
       >
         {/* Gradiente sobre a imagem */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
-        
+
         {/* Texto do banner */}
         <div className="relative z-10 text-right px-4 mt-60 transition-all duration-700 w-full max-w-4xl ml-auto">
           <div key={animatingKey} className="animate-slideDown transition-all duration-700">
@@ -260,38 +260,41 @@ export default function HomePage() {
       {/* Seção Nossos Produtos */}
       <section
         id="products"
-        className="relative w-full bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: 'url("/back-products.png")' }}
+        className="relative w-full bg-gradient-to-b from-white via-[#72787f] to-[#142F4D] overflow-hidden"
       >
-        {/* Separador visual suave entre seções */}
-        <div className="absolute top-0 left-0 w-full h-8 bg-gradient-to-t from-[#1C2E46] to-transparent z-10" />
-
-        {/* Overlay com cor institucional */}
-        <div className="absolute inset-0 bg-[#1C2E46]/85 backdrop-blur-sm z-0" />
-
         {/* Conteúdo */}
         <div className="relative z-20 py-20 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-10 text-center text-white">Our Products</h2>
+            <h2 className="text-4xl font-bold mb-10 text-center text-[#142F4D]">Our Products</h2>
             <div className="grid grid-cols-6 gap-6">
-              <Link href="/products/sugar" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
-                <img src="/icons/sugar.svg" alt="Sugar" className="w-10 h-10 md:w-12 md:h-12" />
+              <Link href="/products/sugar" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
+                  <img src="/products/sugar.jpg" alt="Sugar" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                </div>
                 <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Sugar</h3>
               </Link>
-              <Link href="/products/corn" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
-                <img src="/icons/corn.svg" alt="Corn" className="w-10 h-10 md:w-12 md:h-12" />
+              <Link href="/products/corn" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
+                  <img src="/products/corn.jpg" alt="Corn" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                </div>
                 <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Corn</h3>
               </Link>
-              <Link href="/products/soybeans" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
-                <img src="/icons/soybeans.svg" alt="Soybeans" className="w-10 h-10 md:w-12 md:h-12" />
+              <Link href="/products/soybeans" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
+                  <img src="/products/soybeans.jpg" alt="Soybeans" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                </div>
                 <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Soybeans</h3>
               </Link>
-              <Link href="/products/beef" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
-                <img src="/icons/beef.svg" alt="Beef" className="w-10 h-10 md:w-12 md:h-12" />
+              <Link href="/products/beef" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
+                  <img src="/products/beef.jpg" alt="Beef" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                </div>
                 <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Beef</h3>
               </Link>
-              <Link href="/products/chicken" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-md hover:scale-105 transition-transform">
-                <img src="/icons/chicken.svg" alt="Chicken" className="w-10 h-10 md:w-12 md:h-12" />
+              <Link href="/products/chicken" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
+                  <img src="/products/chicken.jpg" alt="Chicken" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                </div>
                 <h3 className="text-sm md:text-base font-semibold text-[#1C2E46]">Chicken</h3>
               </Link>
             </div>
@@ -299,11 +302,9 @@ export default function HomePage() {
         </div>
       </section>
 
-
-
       {/* Rodapé */}
-      <footer className="bg-gradient-to-br from-[#0A1A2F] via-[#0F253E] to-[#142F4D] text-white pt-16 pb-10 px-6">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+      <footer className="bg-gradient-to-b from-[#142F4D] to-[#0A1A2F] text-white pt-16 pb-10 px-6">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 py-6">
           {/* Logo + Slogan */}
           <div className="flex flex-col gap-4">
             <Image src="/logo-canan-white.png" alt="CaNan Group Logo" width={200} height={60} />
