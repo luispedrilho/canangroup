@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import "@/styles/globals.css";
 
-export default function SugarPage() {
+export default function CornPage() {
   const products = ["Sugar", "Corn", "Soybeans", "Cotton", "Wheat", "Sorghum"];
   const [isOpen, setIsOpen] = useState(false);
 
@@ -64,26 +64,26 @@ export default function SugarPage() {
 
       <section className="bg-white-100 py-16 text-center">
         <h1 className="text-5xl font-bold text-gray-900 mb-4">
-          Sugar: Sweetening Lives and Driving Industries
+          Wheat: The Foundation of Life’s Nourishment
         </h1>
       </section>
 
       <div className="max-w-6xl mx-auto px-1 py-2 flex flex-col md:flex-row items-center gap-10">
         <div className="md:w-1/2 px-1 py-12">
           <p className="text-gray-700 mb-4">
-            Sugar is much more than a sweetener—it's a vital ingredient that supports a variety of industries and enhances everyday life. From food and beverage production to pharmaceuticals and cosmetics, sugar plays a key role in creating products we rely on. Its versatility extends from preserving fruits and boosting flavors to being a natural exfoliant in skincare products.
+            Wheat has been a cornerstone of human civilization for thousands of years, serving as a vital source of nutrition and sustenance across the globe. Its versatility makes it an essential ingredient in countless products, from staple foods like bread, pasta, and pastries to innovative applications in biofuels, animal feed, and even cosmetics.
           </p>
           <p className="text-gray-700 mb-4">
-            Known for its practical benefits, sugar serves as a quick source of energy, supports physical endurance, and contributes to mood regulation by elevating serotonin and dopamine levels. Whether it’s adding sweetness to your favorite recipes or enriching industrial applications, sugar is indispensable.
+            Wheat is a nutritional powerhouse providing energy, fiber, and protein, making it a cornerstone of balanced diets. Its versatility extends across culinary and industrial uses, making it essential in various sectors. Importing wheat promotes global connectivity, supporting international cooperation and innovation. Additionally, modern eco-friendly farming practices highlight its growing sustainability, meeting the needs of environmentally conscious consumers.
           </p>
           <p className="text-gray-700 mb-4">
-            At 加南 CaNan, we are committed to providing high-quality sugar to cater to diverse needs, ensuring it remains a cornerstone of global trade and daily life. Together, we bring the sweetness that connects cultures, flavors, and industries.
+            Wheat is more than just a grain; it’s a symbol of abundance, resilience, and endless possibilities. Whether you’re producing food products, exploring new innovations, or simply bringing quality to your customers, wheat is the golden thread that ties it all together.
           </p>
         </div>
         <div className="md:w-1/2">
           <Image
-            src="/products/sugar.jpg"
-            alt="Sugar"
+            src="/products/wheat.jpg"
+            alt="Corn"
             width={200}
             height={200}
             className="rounded-xl shadow-md w-full h-auto object-cover"
@@ -93,25 +93,28 @@ export default function SugarPage() {
 
       <div className="max-w-6xl mx-auto px-1 py-12 space-y-8 leading-relaxed text-lg">
         <div className="bg-gray-50 p-6 rounded-md shadow-sm text-sm">
-          <h2 className="font-bold mt-4 mb-2">Top Exporters by Volume:</h2>
+          <h2 className="font-bold mt-4 mb-2">Top 5 Exporters by volume:</h2>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>Brazil</strong>: 43.4% of global exports.</li>
-            <li><strong>India</strong>: 32.5%.</li>
-            <li><strong>Thailand</strong>: 9.5%.</li>
-            <li><strong>France</strong>: 3.3%.</li>
-            <li><strong>Germany</strong>: 2.7%.</li>
+            <li><strong>Russia</strong>: 15.2%.</li>
+            <li><strong>Australia</strong>: 24.5%.</li>
+            <li><strong>Canada</strong>: 15.7%.</li>
+            <li><strong>United States</strong>: 17.8%.</li>
+            <li><strong>France</strong>: 17.2%.</li>
           </ul>
 
-          <h2 className="font-bold mt-4 mb-2">Top Importers by Volume:</h2>
+          <h2 className="font-bold mt-4 mb-2">Top 5 Importers by volume:</h2>
           <ul className="list-disc list-inside space-y-1">
-            <li><strong>Indonesia</strong>: 7.2% of global imports.</li>
-            <li><strong>United States</strong>: 6.1%.</li>
-            <li><strong>China</strong>: 5.7%.</li>
-            <li><strong>Italy</strong>: 4%.</li>
-            <li><strong>India</strong>: 3.7%.</li>
+            <li><strong>China</strong>: 4.3%.</li>
+            <li><strong>Egypt</strong>: 3.8%.</li>
+            <li><strong>Indonesia</strong>: 3.7%.</li>
+            <li><strong>Turkey</strong>: 3.5%.</li>
+            <li><strong>Italy</strong>: 3.1%.</li>
           </ul>
+
         </div>
-
+        <p>
+          CaNan Group proudly delivers certified, high-quality corn from South America, enabling consistent supply for both food and industrial use across the globe.
+        </p>
       </div>
 
       <section className="bg-gray-50 py-10">
@@ -120,7 +123,7 @@ export default function SugarPage() {
           <div className="flex flex-wrap gap-4">
             {products.map((product) => (
               <Link key={product} href={`/products/${product.toLowerCase()}`}>
-                <span className={`px-4 py-2 rounded-md border text-sm font-medium transition cursor-pointer ${product === "Sugar"
+                <span className={`px-4 py-2 rounded-md border text-sm font-medium transition cursor-pointer ${product === "Wheat"
                   ? "bg-[#1C2E46] text-white"
                   : "bg-white text-[#1C2E46] border-[#1C2E46] hover:bg-[#1C2E46] hover:text-white"}`}>
                   {product}
@@ -161,7 +164,6 @@ export default function SugarPage() {
               ))}
             </ul>
           </div>
-
           {/* Contact Info */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Contact</h4>

@@ -17,7 +17,7 @@ export default function HomePage() {
   ];
   const bannerDescriptions = [
     "Connecting Guangdong's consumer power with South America's agricultural abundance.",
-    "From fertile fields to the global stage — Corn that feeds the world.",
+    "From fertile fields to the global stage, Corn that feeds the world.",
     "Soybeans cultivated for sustainability and global nourishment."
   ];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -136,7 +136,7 @@ export default function HomePage() {
       {/* Marquee com links para as subpáginas */}
       <div className="sticky top-[130px] z-40 bg-[#F9FAFC] shadow-lg">
         <div className="overflow-x-auto py-3 px-6 flex space-x-4 text-sm font-semibold text-black">
-          {['Sugar', 'Corn', 'Soybeans', 'Beef', 'Chicken'].map(product => (
+          {["Sugar", "Corn", "Soybeans", "Cotton", "Wheat", "Sorghum"].map(product => (
             <Link
               key={product}
               href={`/products/${product.toLowerCase()}`}
@@ -306,17 +306,23 @@ export default function HomePage() {
                 </div>
                 <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Soybeans</h3>
               </Link>
-              <Link href="/products/beef" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+              <Link href="/products/wheat" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
-                  <img src="/products/beef.jpg" alt="Beef" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                  <img src="/products/wheat.jpg" alt="wheat" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Beef</h3>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Wheat</h3>
               </Link>
-              <Link href="/products/chicken" className="col-span-3 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+              <Link href="/products/cotton" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
-                  <img src="/products/chicken.jpg" alt="Chicken" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                  <img src="/products/cotton.jpg" alt="cotton" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
                 </div>
-                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Chicken</h3>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Cotton</h3>
+              </Link>
+              <Link href="/products/sorghum" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
+                <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
+                  <img src="/products/sorghum.jpg" alt="sorghum" className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-110" />
+                </div>
+                <h3 className="text-sm md:text-base font-semibold text-[#142F4D]">Sorghum</h3>
               </Link>
             </div>
           </div>
@@ -338,9 +344,15 @@ export default function HomePage() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-sm text-gray-300">
-              {["About Us", "Our Vision", "Our Team", "What We Do", "Our Products"].map((label) => (
+              {[
+                { label: "About Us", href: "#about" },
+                { label: "Our Vision", href: "#vision" },
+                { label: "Our Team", href: "#team" },
+                { label: "What We Do", href: "#services" },
+                { label: "Our Products", href: "#products" },
+              ].map(({ label, href }) => (
                 <li key={label}>
-                  <a href={`#${label.toLowerCase().replace(/ /g, "")}`} className="hover:text-white transition">
+                  <a href={href} className="hover:text-white transition">
                     {label}
                   </a>
                 </li>
