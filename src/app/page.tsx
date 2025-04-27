@@ -131,7 +131,7 @@ export default function HomePage() {
         {/* Texto do banner */}
         <div className="relative z-10 text-right w-full max-w-xs md:max-w-4xl ml-auto mt-40 md:mt-60 transition-all duration-700">
           <div key={animatingKey} className="animate-slideDown transition-all duration-700">
-            <h1 className="text-3xl md:text-5xl font-bold px-4 md:px-6 py-2 md:py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white text-right">
+            <h1 className="text-xl md:text-5xl font-bold px-4 md:px-6 py-2 md:py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white text-right">
               {bannerMessages[currentIndex]}
             </h1>
             <p className="text-sm md:text-xl max-w-xs md:max-w-2xl ml-auto mt-2 text-white text-right">
