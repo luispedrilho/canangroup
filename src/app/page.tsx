@@ -52,6 +52,7 @@ export default function HomePage() {
 
   return (
     <div className="bg-white text-gray-800">
+
       {/* Cabeçalho */}
       <header className="bg-[#f6f7f9] text-gray-900 px-6 py-0 shadow-md sticky top-0 z-50">
 
@@ -92,45 +93,60 @@ export default function HomePage() {
 
         {/* Menu Mobile */}
         {isOpen && (
-          <div className="md:hidden mt-4 space-y-2 px-6 text-sm font-medium">
-            <a href="#about" className="block hover:underline">About Us</a>
-            <a href="#vision" className="block hover:underline">Our Vision</a>
-            <a href="#team" className="block hover:underline">Our Team</a>
-            <a href="#services" className="block hover:underline">What We Do</a>
-            <a href="#products" className="block hover:underline">Our Products</a>
+          <div className="md:hidden mt-4 px-6">
+            <div className="bg-white rounded-xl shadow-lg py-4 px-6 space-y-4">
+              <a href="#about" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">About Us</a>
+              <a href="#vision" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">Our Vision</a>
+              <a href="#team" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">Our Team</a>
+              <a href="#services" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">What We Do</a>
+              <a href="#products" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">Our Products</a>
+            </div>
           </div>
         )}
+
       </header>
 
       {/* Seção de Banner */}
       <section
         id="banner"
         ref={bannerRef}
-        className={`relative h-[75vh] flex items-center justify-end text-white bg-cover bg-center px-12 transition-all duration-1000 ${isVisible ? "scale-100 opacity-100" : "scale-110 opacity-0"
+        className={`relative h-[75vh] flex items-center justify-end text-white bg-cover bg-center px-4 md:px-12 transition-all duration-1000 ${isVisible ? "scale-100 opacity-100" : "scale-110 opacity-0"
           }`}
-        style={{ backgroundImage: 'url(/banner-impact.jpg)' }}
       >
+        {/* Imagem Desktop */}
+        <div
+          className="hidden md:block absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/banner-impact.jpg)" }}
+        />
+
+        {/* Imagem Mobile */}
+        <div
+          className="block md:hidden absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url(/banner-impact-mobile.jpg)" }}
+        />
+
         {/* Gradiente sobre a imagem */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/40 to-transparent" />
 
         {/* Texto do banner */}
-        <div className="relative z-10 text-right px-4 mt-60 transition-all duration-700 w-full max-w-4xl ml-auto">
+        <div className="relative z-10 text-right w-full max-w-xs md:max-w-4xl ml-auto mt-40 md:mt-60 transition-all duration-700">
           <div key={animatingKey} className="animate-slideDown transition-all duration-700">
-            <h1 className="text-5xl font-bold px-6 py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white min-w-[500px] text-right">
+            <h1 className="text-3xl md:text-5xl font-bold px-4 md:px-6 py-2 md:py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white text-right">
               {bannerMessages[currentIndex]}
             </h1>
-            <p className="text-xl max-w-2xl ml-auto mt-2 text-white text-right">
+            <p className="text-sm md:text-xl max-w-xs md:max-w-2xl ml-auto mt-2 text-white text-right">
               {bannerDescriptions[currentIndex]}
             </p>
           </div>
           <Link
             href="#about"
-            className="mt-6 inline-block bg-[#ffffff] text-[#162336] font-medium px-6 py-2 rounded-full hover:bg-[#162336] hover:text-white transition drop-shadow-lg"
+            className="mt-4 md:mt-6 inline-block bg-[#ffffff] text-[#162336] font-medium px-5 md:px-6 py-2 rounded-full hover:bg-[#162336] hover:text-white transition drop-shadow-lg text-sm md:text-base"
           >
             Learn More
           </Link>
         </div>
       </section>
+
 
 
       {/* Marquee com links para as subpáginas */}
