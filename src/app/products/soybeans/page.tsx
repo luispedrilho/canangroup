@@ -53,12 +53,44 @@ export default function SoybeansPage() {
 
         {/* Menu Mobile */}
         {isOpen && (
-          <div className="md:hidden mt-4 space-y-2 px-6 text-sm font-medium">
-            <a href="/#about" className="block hover:underline">About Us</a>
-            <a href="/#vision" className="block hover:underline">Our Vision</a>
-            <a href="/#team" className="block hover:underline">Our Team</a>
-            <a href="/#services" className="block hover:underline">What We Do</a>
-            <a href="/#products" className="block hover:underline">Our Products</a>
+          <div className="md:hidden mt-4 px-6 py-4">
+            <div className="bg-white rounded-xl shadow-lg py-4 px-6 space-y-1">
+              <a
+                href="/#about"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                About Us
+              </a>
+              <a
+                href="/#vision"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                Our Vision
+              </a>
+              <a
+                href="/#team"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                Our Team
+              </a>
+              <a
+                href="/#services"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                What We Do
+              </a>
+              <a
+                href="/#products"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                Our Products
+              </a>
+            </div>
           </div>
         )}
       </header>

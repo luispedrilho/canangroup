@@ -11,9 +11,9 @@ export default function HomePage() {
   const bannerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const bannerMessages = [
-    "Bridging Southern Excellence",
+    "Southern Excellence Bridge",
     "Empowering Corn Trade",
-    "Global Reach in Soybean Exports"
+    "Global Soybean Reach"
   ];
   const bannerDescriptions = [
     "Connecting Guangdong's consumer power with South America's agricultural abundance.",
@@ -93,16 +93,47 @@ export default function HomePage() {
 
         {/* Menu Mobile */}
         {isOpen && (
-          <div className="md:hidden mt-4 px-6">
-            <div className="bg-white rounded-xl shadow-lg py-4 px-6 space-y-4">
-              <a href="#about" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">About Us</a>
-              <a href="#vision" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">Our Vision</a>
-              <a href="#team" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">Our Team</a>
-              <a href="#services" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">What We Do</a>
-              <a href="#products" className="block text-[#162336] font-semibold hover:text-white hover:bg-[#162336] transition rounded-lg px-4 py-2">Our Products</a>
+          <div className="md:hidden mt-4 px-6 py-4">
+            <div className="bg-white rounded-xl shadow-lg py-4 px-6 space-y-1">
+              <a
+                href="#about"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                About Us
+              </a>
+              <a
+                href="#vision"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                Our Vision
+              </a>
+              <a
+                href="#team"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                Our Team
+              </a>
+              <a
+                href="#services"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                What We Do
+              </a>
+              <a
+                href="#products"
+                onClick={() => setIsOpen(false)}
+                className="block text-[#162336] font-semibold hover:text-[#162336] hover:bg-[#EAF0F6] transition rounded-lg px-4 py-1"
+              >
+                Our Products
+              </a>
             </div>
           </div>
         )}
+
 
       </header>
 
@@ -131,7 +162,7 @@ export default function HomePage() {
         {/* Texto do banner */}
         <div className="relative z-10 text-right w-full max-w-xs md:max-w-4xl ml-auto mt-40 md:mt-60 transition-all duration-700">
           <div key={animatingKey} className="animate-slideDown transition-all duration-700">
-            <h1 className="text-xl md:text-5xl font-bold px-4 md:px-6 py-2 md:py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white text-right">
+            <h1 className="text-xl md:text-5xl font-bold px-4 md:px-6 py-1 md:py-3 rounded-xl drop-shadow-lg inline-block bg-black/50 text-white text-right">
               {bannerMessages[currentIndex]}
             </h1>
             <p className="text-sm md:text-xl max-w-xs md:max-w-2xl ml-auto mt-2 text-white text-right">
@@ -171,7 +202,7 @@ export default function HomePage() {
       </div>
 
       {/* Seção Sobre Nós */}
-      <section id="about" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-left bg-contain" style={{ backgroundImage: "url('/back-section-left.png')" }}>
+      <section id="about" className="scroll-mt-36 py-16 px-6 mx-auto bg-no-repeat bg-left bg-contain" style={{ backgroundImage: "url('/back-section-left.png')" }}>
         <div className="relative max-w-6xl mx-auto">
 
           <h2 className="text-3xl font-bold mb-4">About Us</h2>
@@ -207,7 +238,7 @@ export default function HomePage() {
       </section>
 
       {/* Seção Nossa Visão */}
-      <section id="vision" className="scroll-mt-28 py-16 px-6  mx-auto">
+      <section id="vision" className="scroll-mt-36 py-16 px-6  mx-auto">
         <div className="relative max-w-6xl mx-auto">
 
           <h2 className="text-3xl font-bold mb-4">Our Vision</h2>
@@ -227,7 +258,7 @@ export default function HomePage() {
       </section>
 
       {/* Seção Nossa Equipe */}
-      <section id="team" className="scroll-mt-28 py-16 px-6 mx-auto bg-no-repeat bg-right bg-contain" style={{ backgroundImage: "url('/back-section-right.png')" }}>
+      <section id="team" className="scroll-mt-36 py-16 px-6 mx-auto bg-no-repeat bg-right bg-contain" style={{ backgroundImage: "url('/back-section-right.png')" }}>
         <div className="relative max-w-6xl mx-auto">
 
           <h2 className="text-3xl font-bold mb-4">Our Team</h2>
@@ -259,7 +290,7 @@ export default function HomePage() {
       </section>
 
       {/* Seção O Que Fazemos */}
-      <section id="services" className="scroll-mt-28 py-16 px-6">
+      <section id="services" className="scroll-mt-36 pt-16 pb-0 px-6">
         <div className="relative max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold mb-4">What We Do</h2>
           <p className="mb-6">
@@ -294,15 +325,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Seção Nossos Produtos */}
       <section
         id="products"
-        className="relative w-full bg-gradient-to-b from-white via-[#72787f] to-[#142F4D] overflow-hidden"
+        className="scroll-mt-36 relative w-full bg-repeat-x bg-top"
+        style={{ backgroundImage: "url('/back-section-produtcs.png')" }}
+      >
+        <div className="max-w-6xl mx-auto pt-64 pb-0">
+          <h2 className="text-4xl font-bold mb-10 text-center text-[#142F4D]">Our Products</h2>
+        </div>
+      </section>
+
+      {/* Seção Nossos Produtos */}
+      <section
+        id="products1"
+        className="scroll-mt-36 pt-10 relative w-full bg-gradient-to-b from-white via-[#bcc4cc] to-[#142F4D] overflow-hidden"
       >
         {/* Conteúdo */}
-        <div className="relative z-20 py-20 px-6">
+        <div className="relative z-20 py-1 px-6">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-10 text-center text-[#142F4D]">Our Products</h2>
             <div className="grid grid-cols-6 gap-6">
               <Link href="/products/sugar" className="col-span-2 flex flex-col items-center justify-center gap-3 bg-white border rounded-xl p-6 text-center shadow-sm hover:shadow-lg hover:scale-105 transition-transform duration-300 group">
                 <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden">
