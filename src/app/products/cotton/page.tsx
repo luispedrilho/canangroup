@@ -169,8 +169,9 @@ export default function CornPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 py-6">
           {/* Logo + Slogan */}
           <div className="flex flex-col gap-4">
-            <Image src="/logo-canan-white.png" alt="CaNan Group Logo" width={200} height={60} />
-            <p className="text-sm text-gray-300 leading-relaxed">
+          <Link href="/">
+              <Image src="/logo-canan-white.png" alt="CaNan Group Logo" width={200} height={60} />
+            </Link>            <p className="text-sm text-gray-300 leading-relaxed">
               Bridging Southern Excellence — connecting Guangdong's consumer power with South America's agricultural abundance.
             </p>
           </div>

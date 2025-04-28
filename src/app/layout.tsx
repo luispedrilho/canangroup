@@ -16,7 +16,10 @@ const geistMono = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "CaNan Group",
-  description: "CaNan Group",
+  description: "Connecting Guangdong with South America",
+  icons: {
+    icon: "/favicon.ico", // Favicon configurado corretamente
+  },
 };
 
 export default function RootLayout({
